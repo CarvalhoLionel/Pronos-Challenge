@@ -1,0 +1,19 @@
+pronos_pronostics_homepage:
+    path:     /
+    defaults: { _controller: PronosPronosticsBundle:Default:index }
+
+pronos_pronostics_listeorganisations:
+    path:     /liste-organisations
+    defaults: { _controller: PronosPronosticsBundle:Default:listeOrganisations }
+
+pronos_pronostics_listechampionnats:
+    path:     /liste-championnats
+    defaults: { _controller: PronosPronosticsBundle:Default:listeChampionnats }
+
+pronos_pronostics_listeequipes:
+    path:     /liste-equipes
+    defaults: { _controller: PronosPronosticsBundle:Default:listeEquipes }
+
+pronos_pronostics_mespronos:
+    path:     /mes-pronos
+    defaults: { _controller: PronosPronosticsBundle:Default:mesPronos }

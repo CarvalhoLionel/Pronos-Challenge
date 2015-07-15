@@ -1,0 +1,8 @@
+parameters:
+#    pronos_auth.example.class: Pronos\AuthBundle\Example
+
+services:
+    pronos_user.registration.form.type:
+        class: Pronos\AuthBundle\Form\Type\RegistrationFormType
+        tags:
+            - { name: form.type, alias: pronos_user_registration }

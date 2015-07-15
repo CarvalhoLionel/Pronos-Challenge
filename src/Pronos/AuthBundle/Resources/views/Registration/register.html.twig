@@ -1,0 +1,24 @@
+{% extends '::base.html.twig' %}
+
+{% block body %}
+{% trans_default_domain 'FOSUserBundle' %}
+<h3>Ajout d'un utilisateur : </h3>
+<form action="{{ path('fos_user_registration_register') }}" {{ form_enctype(form) }} method="POST" class="fos_user_registration_register">
+
+    {{ form_start(form) }}
+    <label>Nom : </label> {{ form_widget(form.nom) }}<br/>
+    <label>Prénom : </label> {{ form_widget(form.prenom) }}<br/>
+    <label>Login : </label> {{ form_widget(form.username) }}<br/>
+    <label>Email : </label> {{ form_widget(form.email) }}<br/>
+    <label>Role : </label> {{ form_widget(form.roles) }}<br/>
+    <label>Password : </label> {{ form_widget(form.plainPassword.first) }}<br/>
+    <label>Vérification Password : </label> {{ form_widget(form.plainPassword.second) }}<br/>
+
+    <br/>
+    <div>
+        <input type="submit" value="Enregistrer" />
+    </div>
+    {{ form_end(form) }}
+
+</form>
+{% endblock %}

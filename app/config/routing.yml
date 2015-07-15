@@ -1,0 +1,9 @@
+pronos_pronostics:
+    resource: "@PronosPronosticsBundle/Resources/config/routing.yml"
+    prefix:   /
+
+pronos_auth:
+    resource: "@PronosAuthBundle/Resources/config/routing.yml"
+    prefix:   /
+
+

@@ -1,0 +1,38 @@
+<?php
+
+namespace Pronos\PronosticsBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Equipes
+ *
+ * @ORM\Table(name="equipes")
+ * @ORM\Entity(repositoryClass="Pronos\PronosticsBundle\Entity\Repository\EquipesRepository")
+ */
+class Equipes
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $id;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="nom", type="string", length=80, nullable=false)
+     */
+    private $nom;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="logo", type="string", length=120, nullable=true)
+     */
+    private $logo;
+
+}

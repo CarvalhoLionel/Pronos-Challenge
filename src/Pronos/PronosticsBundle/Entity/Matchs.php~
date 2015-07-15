@@ -1,0 +1,69 @@
+<?php
+
+namespace Pronos\PronosticsBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Matchs
+ *
+ * @ORM\Table(name="matchs")
+ * @ORM\Entity(repositoryClass="Pronos\PronosticsBundle\Entity\Repository\MatchsRepository")
+ */
+class Matchs
+{
+    /**
+     * @ORM\ManyToOne(targetEntity="Pronos\PronosticsBundle\Entity\Championnats")
+     * @ORM\JoinColumn(nullable=false)
+     */
+    private $championnat;
+
+    /**
+     * @ORM\ManyToOne(targetEntity="Pronos\PronosticsBundle\Entity\Journees")
+     * @ORM\JoinColumn(nullable=true)
+     */
+    private $journee;
+
+    /**
+     * @ORM\ManyToOne(targetEntity="Pronos\PronosticsBundle\Entity\Equipes")
+     * @ORM\JoinColumn(nullable=true)
+     */
+    private $equipeDomicile;
+
+    /**
+     * @ORM\ManyToOne(targetEntity="Pronos\PronosticsBundle\Entity\Equipes")
+     * @ORM\JoinColumn(nullable=true)
+     */
+    private $equipeExterieur;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $id;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="scoreEquipeDomicile", type="integer", nullable=true)
+     */
+    private $scoreEquipeDomicile;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="scoreEquipeExterieur", type="integer", nullable=true)
+     */
+    private $scoreEquipeExterieur;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="dateMatch", type="datetime", nullable=true)
+     */
+    private $dateMatch;
+
+}

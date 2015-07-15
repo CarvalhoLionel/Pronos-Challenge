@@ -1,0 +1,11 @@
+{% extends '::base.html.twig' %}
+
+{% block body -%}
+    <h1>Liste des organisations</h1>
+    <br/>
+    {% for org in organisations %}
+        <i><a href="">{{ org.nom }}</a></i><br/>
+    {% endfor %}
+    <br/>
+{% endblock %}
+
