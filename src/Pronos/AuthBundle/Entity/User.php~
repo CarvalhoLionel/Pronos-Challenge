@@ -31,16 +31,16 @@ class User extends BaseUser
     /**
      * @var string
      *
-     * @ORM\Column(name="nom", type="string", length=80, nullable=true)
+     * @ORM\Column(name="firstname", type="string", length=80, nullable=true)
      */
-    private $nom;
+    private $firstname;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="prenom", type="string", length=80, nullable=true)
+     * @ORM\Column(name="lastname", type="string", length=80, nullable=true)
      */
-    private $prenom;
+    private $lastname;
 
     /**
      * @var string
@@ -48,54 +48,54 @@ class User extends BaseUser
      * @ORM\Column(name="avatar", type="string", length=80, nullable=true)
      */
     private $avatar;
-
+    
 
     /**
-     * Set nom
+     * Set firstname
      *
-     * @param string $nom
+     * @param string $firstname
      *
      * @return User
      */
-    public function setNom($nom)
+    public function setFirstname($firstname)
     {
-        $this->nom = $nom;
+        $this->firstname = $firstname;
 
         return $this;
     }
 
     /**
-     * Get nom
+     * Get firstname
      *
      * @return string
      */
-    public function getNom()
+    public function getFirstname()
     {
-        return $this->nom;
+        return $this->firstname;
     }
 
     /**
-     * Set prenom
+     * Set lastname
      *
-     * @param string $prenom
+     * @param string $lastname
      *
      * @return User
      */
-    public function setPrenom($prenom)
+    public function setLastname($lastname)
     {
-        $this->prenom = $prenom;
+        $this->lastname = $lastname;
 
         return $this;
     }
 
     /**
-     * Get prenom
+     * Get lastname
      *
      * @return string
      */
-    public function getPrenom()
+    public function getLastname()
     {
-        return $this->prenom;
+        return $this->lastname;
     }
 
     /**

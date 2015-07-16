@@ -5,18 +5,18 @@ namespace Pronos\PronosticsBundle\Entity;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * Regles
+ * Rules
  *
- * @ORM\Table(name="regles")
- * @ORM\Entity(repositoryClass="Pronos\PronosticsBundle\Entity\Repository\ReglesRepository")
+ * @ORM\Table(name="rules")
+ * @ORM\Entity(repositoryClass="Pronos\PronosticsBundle\Entity\Repository\RulesRepository")
  */
-class Regles
+class Rules
 {
     /**
-     * @ORM\OneToOne(targetEntity="Pronos\PronosticsBundle\Entity\Championnats", cascade={"persist"})
+     * @ORM\OneToOne(targetEntity="Pronos\PronosticsBundle\Entity\Championship", cascade={"persist"})
      * @ORM\JoinColumn(nullable=true)
      */
-    private $championnat;
+    private $championship;
 
     /**
      * @var integer
@@ -30,16 +30,16 @@ class Regles
     /**
      * @var integer
      *
-     * @ORM\Column(name="pointResultatCorrect", type="integer", nullable=false)
+     * @ORM\Column(name="pointsCorrectResult", type="integer", nullable=false)
      */
-    private $pointResultatCorrect;
+    private $pointsCorrectResult;
 
     /**
      * @var integer
      *
-     * @ORM\Column(name="pointResultatExact", type="integer", nullable=false)
+     * @ORM\Column(name="pointsExactResult", type="integer", nullable=false)
      */
-    private $pointResultatExact;
+    private $pointsExactResult;
 
 
     /**
@@ -119,5 +119,77 @@ class Regles
     public function getChampionnat()
     {
         return $this->championnat;
+    }
+
+    /**
+     * Set pointsCorrectResult
+     *
+     * @param integer $pointsCorrectResult
+     *
+     * @return Rules
+     */
+    public function setPointsCorrectResult($pointsCorrectResult)
+    {
+        $this->pointsCorrectResult = $pointsCorrectResult;
+
+        return $this;
+    }
+
+    /**
+     * Get pointsCorrectResult
+     *
+     * @return integer
+     */
+    public function getPointsCorrectResult()
+    {
+        return $this->pointsCorrectResult;
+    }
+
+    /**
+     * Set pointsExactResult
+     *
+     * @param integer $pointsExactResult
+     *
+     * @return Rules
+     */
+    public function setPointsExactResult($pointsExactResult)
+    {
+        $this->pointsExactResult = $pointsExactResult;
+
+        return $this;
+    }
+
+    /**
+     * Get pointsExactResult
+     *
+     * @return integer
+     */
+    public function getPointsExactResult()
+    {
+        return $this->pointsExactResult;
+    }
+
+    /**
+     * Set championship
+     *
+     * @param \Pronos\PronosticsBundle\Entity\Championship $championship
+     *
+     * @return Rules
+     */
+    public function setChampionship(\Pronos\PronosticsBundle\Entity\Championship $championship = null)
+    {
+        $this->championship = $championship;
+
+        return $this;
+    }
+
+    /**
+     * Get championship
+     *
+     * @return \Pronos\PronosticsBundle\Entity\Championship
+     */
+    public function getChampionship()
+    {
+        return $this->championship;
     }
 }

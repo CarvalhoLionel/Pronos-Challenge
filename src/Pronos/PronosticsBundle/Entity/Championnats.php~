@@ -14,7 +14,7 @@ use Doctrine\ORM\Mapping as ORM;
 class Championnats
 {
 	/**
-	 * @ORM\ManyToMany(targetEntity="Pronos\PronosticsBundle\Entity\Equipes", cascade={"persist"})
+	 * @ORM\ManyToMany(targetEntity="Pronos\PronosticsBundle\Entity\Equipes")
 	 */
 	private $equipes;
 	
@@ -30,9 +30,16 @@ class Championnats
     /**
      * @var string
      *
-     * @ORM\Column(name="nom", type="string", length=80, nullable=false)
+     * @ORM\Column(name="nom", type="string", nullable=false)
      */
     private $nom;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="slug", type="string", nullable=false)
+     */
+    private $slug;
 
 	// Comme la propriété $equipes doit être un ArrayCollection,
 	// On doit la définir dans un constructeur :
@@ -42,7 +49,7 @@ class Championnats
 	}
 
 	// Notez le singulier, on ajoute une seule catégorie à la fois
-	public function addEquipe(Equipe $equipe)
+	public function addEquipe(Equipes $equipe)
 	{
 		// Ici, on utilise l'ArrayCollection vraiment comme un tableau
 		$this->equipes[] = $equipe;
@@ -50,7 +57,7 @@ class Championnats
 		return $this;
 	}
 
-	public function removeEquipe(Equipe $equipe)
+	public function removeEquipe(Equipes $equipe)
 	{
 		// Ici on utilise une méthode de l'ArrayCollection, pour supprimer l'équipe en argument
 		$this->equipes->removeElement($equipe);
@@ -62,4 +69,37 @@ class Championnats
 		return $this->equipes;
 	}
 
+
+    /**
+     * Get id
+     *
+     * @return integer 
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * Set nom
+     *
+     * @param string $nom
+     * @return Championnats
+     */
+    public function setNom($nom)
+    {
+        $this->nom = $nom;
+
+        return $this;
+    }
+
+    /**
+     * Get nom
+     *
+     * @return string 
+     */
+    public function getNom()
+    {
+        return $this->nom;
+    }
 }

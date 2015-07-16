@@ -5,12 +5,12 @@ namespace Pronos\PronosticsBundle\Entity;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * Equipes
+ * Team
  *
- * @ORM\Table(name="equipes")
- * @ORM\Entity(repositoryClass="Pronos\PronosticsBundle\Entity\Repository\EquipesRepository")
+ * @ORM\Table(name="team")
+ * @ORM\Entity(repositoryClass="Pronos\PronosticsBundle\Entity\Repository\TeamRepository")
  */
-class Equipes
+class Team
 {
     /**
      * @var integer
@@ -24,9 +24,9 @@ class Equipes
     /**
      * @var string
      *
-     * @ORM\Column(name="nom", type="string", length=80, nullable=false)
+     * @ORM\Column(name="name", type="string", length=80, nullable=false)
      */
-    private $nom;
+    private $name;
 
     /**
      * @var string
@@ -46,7 +46,7 @@ class Equipes
     /**
      * Get id
      *
-     * @return integer 
+     * @return integer
      */
     public function getId()
     {
@@ -54,33 +54,35 @@ class Equipes
     }
 
     /**
-     * Set nom
+     * Set name
      *
-     * @param string $nom
-     * @return Equipes
+     * @param string $name
+     *
+     * @return Team
      */
-    public function setNom($nom)
+    public function setName($name)
     {
-        $this->nom = $nom;
+        $this->name = $name;
 
         return $this;
     }
 
     /**
-     * Get nom
+     * Get name
      *
-     * @return string 
+     * @return string
      */
-    public function getNom()
+    public function getName()
     {
-        return $this->nom;
+        return $this->name;
     }
 
     /**
      * Set logo
      *
      * @param string $logo
-     * @return Equipes
+     *
+     * @return Team
      */
     public function setLogo($logo)
     {
@@ -92,10 +94,34 @@ class Equipes
     /**
      * Get logo
      *
-     * @return string 
+     * @return string
      */
     public function getLogo()
     {
         return $this->logo;
+    }
+
+    /**
+     * Set slug
+     *
+     * @param string $slug
+     *
+     * @return Team
+     */
+    public function setSlug($slug)
+    {
+        $this->slug = $slug;
+
+        return $this;
+    }
+
+    /**
+     * Get slug
+     *
+     * @return string
+     */
+    public function getSlug()
+    {
+        return $this->slug;
     }
 }
