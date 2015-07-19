@@ -1,0 +1,30 @@
+pronos:
+    path:     /
+    defaults: { _controller: "PronosPronosticsBundle:Pronos:index" }
+
+pronos_show:
+    path:     /{id}/show
+    defaults: { _controller: "PronosPronosticsBundle:Pronos:show" }
+
+pronos_new:
+    path:     /new
+    defaults: { _controller: "PronosPronosticsBundle:Pronos:new" }
+
+pronos_create:
+    path:     /create
+    defaults: { _controller: "PronosPronosticsBundle:Pronos:create" }
+    methods:  POST
+
+pronos_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "PronosPronosticsBundle:Pronos:edit" }
+
+pronos_update:
+    path:     /{id}/update
+    defaults: { _controller: "PronosPronosticsBundle:Pronos:update" }
+    methods:  [POST, PUT]
+
+pronos_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "PronosPronosticsBundle:Pronos:delete" }
+    methods:  [POST, DELETE]

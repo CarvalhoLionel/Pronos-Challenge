@@ -1,3 +1,31 @@
+pronos_pronostics_pronos:
+    resource: "@PronosPronosticsBundle/Resources/config/routing/pronos.yml"
+    prefix:   /pronos
+
+pronos_pronostics_match:
+    resource: "@PronosPronosticsBundle/Resources/config/routing/match.yml"
+    prefix:   /match
+
+pronos_pronostics_daytime:
+    resource: "@PronosPronosticsBundle/Resources/config/routing/daytime.yml"
+    prefix:   /daytime
+
+pronos_pronostics_championship:
+    resource: "@PronosPronosticsBundle/Resources/config/routing/championship.yml"
+    prefix:   /championship
+
+pronos_pronostics_rules:
+    resource: "@PronosPronosticsBundle/Resources/config/routing/rules.yml"
+    prefix:   /rules
+
+pronos_pronostics_team:
+    resource: "@PronosPronosticsBundle/Resources/config/routing/team.yml"
+    prefix:   /team
+
+pronos_pronostics_organization:
+    resource: "@PronosPronosticsBundle/Resources/config/routing/organization.yml"
+    prefix:   /organization
+
 pronos_pronostics_homepage:
     path:     /
     defaults: { _controller: PronosPronosticsBundle:Default:index }

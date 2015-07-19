@@ -2,12 +2,48 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="Site de pronostics">
+        <meta name="author" content="">
+
         <title>{% block title %}Pronos Challenge{% endblock %}</title>
+
+        <!-- Bootstrap core CSS -->
+        <link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet"/>
+        <!-- Custom styles for this template -->
+        <link href="{{ asset('css/style.css') }}" rel="stylesheet"/>
+
+        <!-- Just for debugging purposes. Don't actually copy this line! -->
+        <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
         {% block stylesheets %}{% endblock %}
-        <link rel="icon" type="image/x-icon" href="{{ asset('ballon.png') }}" />
+
+        <link rel="icon" type="image/x-icon" href="{{ asset('award.ico') }}" />
     </head>
     <body>
-        {% block body %}{% endblock %}
+        <div class="row page">
+            {% block header %}{% include '::header.html.twig' %}{% endblock %}
+            <div class="col-xs-12 col-sm-12 col-md-8 col-md-offset-2 col-lg-8 col-lg-offset-2 bloc-principal">
+                {% block nav %}{% include '::nav.html.twig' %}{% endblock %}
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 content">
+                        {% block body %}{% endblock %}
+                    </div>
+                </div>
+            </div>
+            {% block footer %}{% include '::footer.html.twig' %}{% endblock %}
+        </div>
         {% block javascripts %}{% endblock %}
+        <!-- Placed at the end of the document so the pages load faster -->
+        <script src="{{ asset('js/jquery-1.11.1.min.js') }}"></script>
+        <script src="{{ asset('js/bootstrap.min.js') }}"></script>
+        <script src="{{ asset('js/main.js') }}"></script>
     </body>
 </html>

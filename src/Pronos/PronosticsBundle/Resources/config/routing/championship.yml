@@ -1,0 +1,30 @@
+championship:
+    path:     /
+    defaults: { _controller: "PronosPronosticsBundle:Championship:index" }
+
+championship_show:
+    path:     /{id}/show
+    defaults: { _controller: "PronosPronosticsBundle:Championship:show" }
+
+championship_new:
+    path:     /new
+    defaults: { _controller: "PronosPronosticsBundle:Championship:new" }
+
+championship_create:
+    path:     /create
+    defaults: { _controller: "PronosPronosticsBundle:Championship:create" }
+    methods:  POST
+
+championship_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "PronosPronosticsBundle:Championship:edit" }
+
+championship_update:
+    path:     /{id}/update
+    defaults: { _controller: "PronosPronosticsBundle:Championship:update" }
+    methods:  [POST, PUT]
+
+championship_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "PronosPronosticsBundle:Championship:delete" }
+    methods:  [POST, DELETE]

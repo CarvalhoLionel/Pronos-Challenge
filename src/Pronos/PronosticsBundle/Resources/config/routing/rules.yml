@@ -1,0 +1,30 @@
+rules:
+    path:     /
+    defaults: { _controller: "PronosPronosticsBundle:Rules:index" }
+
+rules_show:
+    path:     /{id}/show
+    defaults: { _controller: "PronosPronosticsBundle:Rules:show" }
+
+rules_new:
+    path:     /new
+    defaults: { _controller: "PronosPronosticsBundle:Rules:new" }
+
+rules_create:
+    path:     /create
+    defaults: { _controller: "PronosPronosticsBundle:Rules:create" }
+    methods:  POST
+
+rules_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "PronosPronosticsBundle:Rules:edit" }
+
+rules_update:
+    path:     /{id}/update
+    defaults: { _controller: "PronosPronosticsBundle:Rules:update" }
+    methods:  [POST, PUT]
+
+rules_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "PronosPronosticsBundle:Rules:delete" }
+    methods:  [POST, DELETE]

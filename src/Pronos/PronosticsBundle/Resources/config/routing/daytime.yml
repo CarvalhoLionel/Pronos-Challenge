@@ -1,0 +1,30 @@
+daytime:
+    path:     /
+    defaults: { _controller: "PronosPronosticsBundle:Daytime:index" }
+
+daytime_show:
+    path:     /{id}/show
+    defaults: { _controller: "PronosPronosticsBundle:Daytime:show" }
+
+daytime_new:
+    path:     /new
+    defaults: { _controller: "PronosPronosticsBundle:Daytime:new" }
+
+daytime_create:
+    path:     /create
+    defaults: { _controller: "PronosPronosticsBundle:Daytime:create" }
+    methods:  POST
+
+daytime_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "PronosPronosticsBundle:Daytime:edit" }
+
+daytime_update:
+    path:     /{id}/update
+    defaults: { _controller: "PronosPronosticsBundle:Daytime:update" }
+    methods:  [POST, PUT]
+
+daytime_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "PronosPronosticsBundle:Daytime:delete" }
+    methods:  [POST, DELETE]

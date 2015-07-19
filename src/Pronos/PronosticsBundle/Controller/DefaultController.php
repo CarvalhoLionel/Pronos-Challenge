@@ -13,9 +13,9 @@ class DefaultController extends Controller
 
     public function listeOrganisationsAction()
     {
-        $organisations = $this->getDoctrine()->getRepository('PronosPronosticsBundle:Organisations')->findAll();
-        return $this->render('PronosPronosticsBundle:Default:listeOrganisations.html.twig',
-            array('organisations' => $organisations));
+        $organizations = $this->getDoctrine()->getRepository('PronosPronosticsBundle:Organization')->findAll();
+        return $this->render('PronosPronosticsBundle:Default:listOrganizations.html.twig',
+            array('organisations' => $organizations));
     }
 
     public function listeChampionnatsAction()

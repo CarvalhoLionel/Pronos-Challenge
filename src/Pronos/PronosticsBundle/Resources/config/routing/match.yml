@@ -1,0 +1,30 @@
+match:
+    path:     /
+    defaults: { _controller: "PronosPronosticsBundle:Match:index" }
+
+match_show:
+    path:     /{id}/show
+    defaults: { _controller: "PronosPronosticsBundle:Match:show" }
+
+match_new:
+    path:     /new
+    defaults: { _controller: "PronosPronosticsBundle:Match:new" }
+
+match_create:
+    path:     /create
+    defaults: { _controller: "PronosPronosticsBundle:Match:create" }
+    methods:  POST
+
+match_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "PronosPronosticsBundle:Match:edit" }
+
+match_update:
+    path:     /{id}/update
+    defaults: { _controller: "PronosPronosticsBundle:Match:update" }
+    methods:  [POST, PUT]
+
+match_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "PronosPronosticsBundle:Match:delete" }
+    methods:  [POST, DELETE]

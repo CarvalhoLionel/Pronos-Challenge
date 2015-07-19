@@ -46,6 +46,11 @@ class Organization
         $this->championship = new \Doctrine\Common\Collections\ArrayCollection();
     }
 
+    public function __toString()
+    {
+        return "toto"; //return $this->getName();
+    }
+
     /**
      * Get id
      *

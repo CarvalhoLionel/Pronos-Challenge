@@ -1,0 +1,164 @@
+body {
+	background-color:#e7e7e7;
+	background-image:url("../images/fond-championsleague.jpg");
+	background-size: 100% 100%;
+	background-attachment:fixed;
+	overflow-x:hidden;	/* cache la scroll horizontale qui est inutile */
+	font-family: Arial,"Helvetica Neue",Helvetica,sans-serif;
+}
+
+.bloc-principal {
+	background:white;
+	height:100%;
+	min-height:880px;
+}
+
+.banniere {
+	height:120px;
+}
+
+.navbar-default {
+	background-color: #032546;	/* #1E3660 ou #0C172D ou #032546 */
+	/*border-bottom: 3px solid #55789B;	/* #8EA7C1 ou #55789B */
+	border: 0px;
+}
+
+.navbar {
+	position: relative;
+	min-height: 10px;
+	margin-bottom:0px;
+	border-radius: 0px;
+}
+
+.navbar-default .navbar-nav>li>a {
+	color: white;
+}
+
+.navbar-default .navbar-nav>li>a:hover {
+	color: #55789B;
+}
+
+.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:hover, .navbar-default .navbar-nav>.active>a:focus {
+  color: #032546;
+  background-color: #55789B;
+}
+
+.navbar-default .navbar-nav>.open>a, .navbar-default .navbar-nav>.open>a:hover, .navbar-default .navbar-nav>.open>a:focus {
+  background-color: #032546;
+  color: #55789B;
+}
+.navbar-default .navbar-nav>li {
+	margin-left:5px;
+}
+.menu {
+	background-color: #032546;
+	border-bottom: 3px solid #55789B;	/* #8EA7C1 ou #55789B */
+}
+
+.menu-ul li a{
+	color: white;
+}
+
+.menu-ul li a:hover{
+	background-color: transparent;
+	color:#55789B;
+}
+
+.dropdown-menu>li>a:focus {
+	background-color:transparent;
+	color:#55789B;
+}
+
+.navbar-default .navbar-nav>li>a:focus {
+	color:#55789B;
+}
+
+.navbar-default .navbar-toggle .icon-bar {
+	background-color: white;
+}
+
+.navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
+	border-color: #032546;
+	background-color: #55789B;
+}
+
+.navbar-default .navbar-toggle .icon-bar:hover, .navbar-default .navbar-toggle .icon-bar:focus {
+	background-color: white;
+}
+
+.container-fluid {
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 0px;
+  padding-right: 15px;
+}
+
+/* Modification du css bootstrap sur le menu */
+.nav>li>a:hover, .nav>li>a:focus {
+	background-color: #032546;
+	color: white;
+}
+
+.nav .open>a, .nav .open>a:hover, .nav .open>a:focus {
+	background-color: #032546;
+	color: white;
+}
+/* Fin modification css bootstrap */
+
+.dropdown ul {
+	background-color: #032546;	/*#36363a;*/
+}
+
+.footer {
+	background-color:#032546;
+	color:white;
+	border-top:3px solid #55789B;
+	text-align:center;
+	display:inline;
+	min-height:80px;
+	line-height:80px;
+	vertical-align:middle;
+}
+
+.footer-copyright {
+	color: #cfd8dc;
+	font-size: 11px;
+}
+
+.footer-mentions {
+	color: #cfd8dc;
+	font-size: 11px;
+}
+
+.content {
+	min-height:520px;
+}
+
+.barre-haut {
+	background-color:#0C172D;
+	height:50px;
+	line-height:50px;
+	vertical-align:middle;
+	margin-left:10px;
+}
+
+a.lien-inscription, a.lien-connexion {
+	margin-left:40px;
+	text-decoration:none;
+	color:white;
+	font-weight:bold;
+}
+
+a.lien-inscription:hover, a.lien-connexion:hover {
+	text-decoration:underline;
+}
+
+.form-connexion {
+	display:inline;
+	vertical-align:middle;
+}
+
+.input-connexion {
+	height:20px;
+}
+

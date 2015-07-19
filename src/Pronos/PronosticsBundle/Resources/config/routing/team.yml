@@ -1,0 +1,30 @@
+team:
+    path:     /
+    defaults: { _controller: "PronosPronosticsBundle:Team:index" }
+
+team_show:
+    path:     /{id}/show
+    defaults: { _controller: "PronosPronosticsBundle:Team:show" }
+
+team_new:
+    path:     /new
+    defaults: { _controller: "PronosPronosticsBundle:Team:new" }
+
+team_create:
+    path:     /create
+    defaults: { _controller: "PronosPronosticsBundle:Team:create" }
+    methods:  POST
+
+team_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "PronosPronosticsBundle:Team:edit" }
+
+team_update:
+    path:     /{id}/update
+    defaults: { _controller: "PronosPronosticsBundle:Team:update" }
+    methods:  [POST, PUT]
+
+team_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "PronosPronosticsBundle:Team:delete" }
+    methods:  [POST, DELETE]
